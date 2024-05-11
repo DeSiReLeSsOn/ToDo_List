@@ -4,11 +4,11 @@ from .models import Todo
 from .serializers import TodoSerializer
 
 
-class ListTodo(generics.ListApiView):
+class ListTodo(generics.ListAPIView):
     queryset = Todo.objects.all()
     serializer = TodoSerializer
 
 
-class  DetailTodo(generics.RetrieveApiView):
+class  DetailTodo(generics.RetrieveAPIView):
     queryset = Todo.objects.all() 
     serializer = TodoSerializer
